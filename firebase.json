@@ -1,0 +1,26 @@
+{
+  "hosting": [
+    {
+      "target": "github-issues-page-nextjs",
+      "public": "apps/issue-page-web/out",
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "ignore": ["firebase.json", "/.", "/node_modules/"]
+    },
+    {
+      "target": "github-issues-page-storybook",
+      "public": "apps/storybook-vite/storybook-static",
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "ignore": ["firebase.json", "/.", "/node_modules/"]
+    }
+  ]
+}
