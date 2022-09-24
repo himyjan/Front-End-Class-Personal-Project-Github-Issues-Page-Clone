@@ -1,0 +1,28 @@
+# https://github.com/chromaui/chromatic-cli/blob/main/.github/workflows/chromatic-prod.yml
+name: Chromatic
+on: push
+
+jobs:
+  chromatic:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: install
+        run: yarn install --frozen-lockfile
+      - uses: chromaui/action-next@v1
+        with:
+          exitOnceUploaded: true
+          onlyChanged: true
+          traceChanged: true
+          diagnostics: true
+        env:
+          CHROMATIC_PROJECT_TOKEN: 7ad124c5ed7f
+      - uses: actions/upload-artifact@v2
+        if: always()
+        with:
+          name: chromatic-build-artifacts-${{ github.run_id }}
+          path: |
+            chromatic-diagnostics.json
+            **/build-storybook.log

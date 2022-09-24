@@ -1,0 +1,18 @@
+{
+  "projects": {
+    "default": "github-issues-page-46712"
+  },
+  "targets": {
+    "github-issues-page-46712": {
+      "hosting": {
+        "github-issues-page-46712": [
+          "github-issues-page-46712"
+        ],
+        "github-issues-page-storybook": [
+          "github-issues-page-storybook"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}
