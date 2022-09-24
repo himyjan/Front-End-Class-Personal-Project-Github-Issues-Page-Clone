@@ -1,4 +1,5 @@
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
+const path = require('path');
 
 module.exports = {
   stories: ['../src/**/*.stories.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'],
@@ -8,7 +9,22 @@ module.exports = {
     '@storybook/addon-interactions',
     '@storybook/preset-create-react-app',
     '@storybook/addon-backgrounds',
+    {
+      name: '@storybook/addon-storysource',
+      options: {
+        rule: {
+          // test: [/\.stories\.jsx?$/], This is default
+          include: [path.resolve(__dirname, '../src')], // You can specify directories
+        },
+        loaderOptions: {
+          prettierConfig: { printWidth: 80, singleQuote: true },
+        },
+      },
+    },
+    '@storybook/addon-a11y',
     'storybook-addon-themes',
+    'storybook-addon-designs',
+    'addon-screen-reader',
   ],
   framework: {
     name: '@storybook/react-webpack5',

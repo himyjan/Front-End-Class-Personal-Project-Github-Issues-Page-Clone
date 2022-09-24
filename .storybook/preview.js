@@ -1,7 +1,13 @@
 import { themes } from '@storybook/theming';
+import { initialize, mswDecorator } from 'msw-storybook-addon';
 
 import '!style-loader!css-loader!postcss-loader!tailwindcss/tailwind.css';
 import 'tailwindcss/tailwind.css';
+
+// .storybook/preview.js
+import { Suspense, useEffect } from 'react';
+import { I18nextProvider } from 'react-i18next';
+import i18n from '../src/i18n';
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
@@ -11,7 +17,6 @@ export const parameters = {
       date: /Date$/,
     },
   },
-
   docs: {
     theme: themes.light,
   },
@@ -44,3 +49,61 @@ export const parameters = {
     ],
   },
 };
+
+// Wrap your stories in the I18nextProvider component
+const withI18next = (Story, context) => {
+  const { locale } = context.globals;
+
+  // When the locale global changes
+  // Set the new locale in i18n
+  useEffect(() => {
+    i18n.changeLanguage(locale);
+  }, [locale]);
+
+  return (
+    // This catches the suspense from components not yet ready (still loading translations)
+    // Alternative: set useSuspense to false on i18next.options.react when initializing i18next
+    <Suspense fallback={<div>loading translations...</div>}>
+      <I18nextProvider i18n={i18n}>
+        <Story />
+      </I18nextProvider>
+    </Suspense>
+  );
+};
+
+// export decorators for storybook to wrap your stories in
+// export const decorators = [withI18next];
+
+/* Snipped for brevity */
+
+// Create a global variable called locale in storybook
+// and add a menu in the toolbar to change your locale
+export const globalTypes = {
+  locale: {
+    name: 'Locale',
+    description: 'Internationalization locale',
+    toolbar: {
+      icon: 'globe',
+      items: [
+        { value: 'en', title: 'English' },
+        { value: 'de', title: 'Deutsch' },
+        { value: 'ar', title: 'عربي' },
+      ],
+      showName: true,
+    },
+  },
+};
+
+// When The language changes, set the document direction
+i18n.on('languageChanged', (locale) => {
+  const direction = i18n.dir(locale);
+  document.dir = direction;
+});
+
+// Initialize MSW
+initialize();
+
+// Provide the MSW addon decorator globally
+// export const decorators = [mswDecorator];
+
+export const decorators = [withI18next, mswDecorator];
