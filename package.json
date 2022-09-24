@@ -98,7 +98,8 @@
       "@storybook/react": "$@storybook/react"
     },
     "storybook-addon-designs": {
-      "@storybook/theming": "$@storybook/theming"
+      "@storybook/theming": "$@storybook/theming",
+      "@storybook/components": "$@storybook/components"
     },
     "styled-reset": {
       "styled-components": "$styled-components"
