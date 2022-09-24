@@ -2,7 +2,6 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 /* eslint-disable prefer-destructuring */
 /* eslint-disable @typescript-eslint/dot-notation */
-/* eslint-disable prettier/prettier */
 /* eslint-disable @typescript-eslint/no-empty-interface */
 import { FunctionComponent, useEffect } from 'react';
 import {
