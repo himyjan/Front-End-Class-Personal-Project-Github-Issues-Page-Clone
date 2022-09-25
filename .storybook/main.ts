@@ -40,7 +40,6 @@ module.exports = {
   },
   features: {
     previewMdx2: true,
-    storyStoreV7: true,
   },
   webpackFinal: async (config) => {
     config.resolve.plugins = [
