@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import {
+  DiffIgnoredIcon,
   CopilotIcon,
   BellIcon,
   ThreeBarsIcon,
@@ -163,9 +164,9 @@ export const Header = () => {
   return (
     <Wrapper>
       <BigWrapOne>
-        <Search placeholder="Search or jump to..." />
-        {/* <SearchButton alt="" src="searchButton"></SearchButton> */}
         <MarkGithubIcon size={35} fill="white" />
+        <Search placeholder="Search or jump to..." />
+        <DiffIgnoredIcon size={20} />
         <HeaderText>Pull requests</HeaderText>
         <HeaderText>Issues</HeaderText>
         <HeaderText>Marketplace</HeaderText>
