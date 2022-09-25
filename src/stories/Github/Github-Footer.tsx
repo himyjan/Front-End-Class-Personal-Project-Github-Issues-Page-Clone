@@ -8,7 +8,7 @@ const FooterText = styled.span`
   }
 `;
 
-const FooterInfo = styled.section`
+const FooterInfo = styled.div`
   display: flex;
   width: 85%;
   flex-wrap: wrap;

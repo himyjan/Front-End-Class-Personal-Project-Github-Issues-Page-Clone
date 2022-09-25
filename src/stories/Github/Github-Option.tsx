@@ -64,7 +64,7 @@ const CodeSection = styled.div`
   }
 `;
 
-const Wrapper = styled.section`
+const Wrapper = styled.div`
   display: flex;
   background: #f5f7f9;
   height: 48px;

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { MarkGithubIcon } from '@primer/octicons-react';
 
-const FooterWrapper = styled.section`
+const FooterWrapper = styled.div`
   display: flex;
   flex-direction: column;
   width: 85%;
@@ -31,7 +31,7 @@ const GithubLogo = styled.img`
   }
 `;
 
-const GithubWrapper = styled.section`
+const GithubWrapper = styled.div`
   display: flex;
   align-items: center;
   margin-top: 14px;
@@ -54,7 +54,7 @@ const FooterText = styled.span`
   }
 `;
 
-const FooterInfo = styled.section`
+const FooterInfo = styled.div`
   display: flex;
   width: 100%;
   flex-wrap: wrap;

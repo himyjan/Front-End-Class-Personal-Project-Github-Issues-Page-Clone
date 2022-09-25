@@ -36,14 +36,14 @@ const DefaultColorText = styled.div`
   }
 `;
 
-const InputWrapper = styled.section`
+const InputWrapper = styled.div`
   position: relative;
   width: 100%;
   @media screen and (min-width: 768px) {
   }
 `;
 
-const ColorSelector = styled.section`
+const ColorSelector = styled.div`
   width: 240px;
   height: 87px;
   background: white;
@@ -59,7 +59,7 @@ const ColorSelector = styled.section`
   }
 `;
 
-const BigWrapper = styled.section`
+const BigWrapper = styled.div`
   @media screen and (min-width: 768px) {
     display: flex;
     align-items: center;
@@ -68,7 +68,7 @@ const BigWrapper = styled.section`
   }
 `;
 
-const ButtonWrapper = styled.section`
+const ButtonWrapper = styled.div`
   display: flex;
   @media screen and (min-width: 768px) {
   }
@@ -184,7 +184,7 @@ const ColorRoller = styled.div<ColorBrickProp>`
   }
 `;
 
-const ColorInputSection = styled.section`
+const ColorInputSection = styled.div`
   display: flex;
   flex-direction: column;
   margin: 0 16px 16px 16px;
@@ -193,7 +193,7 @@ const ColorInputSection = styled.section`
   }
 `;
 
-const LabelInputSection = styled.section`
+const LabelInputSection = styled.div`
   display: flex;
   flex-direction: column;
   margin: 16px;
@@ -237,7 +237,7 @@ type NewLabelProp = {
 };
 // 傳props一定要設定type，在styled component
 
-const NewLabelSection = styled.section<NewLabelProp>`
+const NewLabelSection = styled.div<NewLabelProp>`
   display: ${(props) => (props.labelOpen ? 'flex' : 'none')};
   flex-direction: column;
   width: 95%;
@@ -335,7 +335,7 @@ const MileText = styled.span`
   }
 `;
 
-const MileSection = styled.section`
+const MileSection = styled.div`
   display: flex;
   align-items: center;
   width: 125.38px;

@@ -8,6 +8,7 @@ import {
   PlusIcon,
   TriangleDownIcon,
 } from '@primer/octicons-react';
+import { parseCookies, setCookie, destroyCookie } from 'nookies';
 
 // import searchButton from "../img/searchButton.png"
 
@@ -46,7 +47,7 @@ const BigBellIcons = styled.img`
   }
 `;
 
-const BirWrapTwo = styled.section`
+const BirWrapTwo = styled.div`
   display: none;
   @media screen and (min-width: 768px) {
     display: flex;
@@ -71,7 +72,7 @@ const SmallGithubIcon = styled.img`
   }
 `;
 
-const BigWrapOne = styled.section`
+const BigWrapOne = styled.div`
   display: none;
   @media screen and (min-width: 768px) {
     display: flex;
@@ -149,6 +150,7 @@ const Hamburger = styled.img`
     display: none;
   }
 `;
+
 const Wrapper = styled.div`
   background: #24292f;
   width: 100%;
@@ -160,25 +162,51 @@ const Wrapper = styled.div`
   }
 `;
 
+const SignBtn = styled.div`
+  color: #ffffff;
+  width: 54.648px;
+  height: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+`;
+
 function Header() {
+  const cookies = parseCookies();
+
+  console.log(cookies);
+
   return (
     <Wrapper>
       <BigWrapOne>
         <MarkGithubIcon size={35} fill="white" />
-        <Search placeholder="Search or jump to..." />
+        {cookies?.logged_in === 'yes' ? (
+          <Search placeholder="Search or jump to..." />
+        ) : null}
         <DiffIgnoredIcon size={20} />
         <HeaderText>Pull requests</HeaderText>
         <HeaderText>Issues</HeaderText>
         <HeaderText>Marketplace</HeaderText>
         <HeaderText>Explore</HeaderText>
       </BigWrapOne>
-      <BirWrapTwo>
-        <BellIcon size={16} fill="white" />
-        <PlusIcon size={16} fill="white" />
-        <TriangleDownIcon size={16} fill="white" />
-        <CopilotIcon size={20} fill="white" />
-        <TriangleDownIcon size={16} fill="white" />
-      </BirWrapTwo>
+      {cookies?.logged_in === 'yes' ? (
+        <BirWrapTwo>
+          <BellIcon size={16} fill="white" />
+          <PlusIcon size={16} fill="white" />
+          <TriangleDownIcon size={16} fill="white" />
+          <CopilotIcon size={20} fill="white" />
+          <TriangleDownIcon size={16} fill="white" />
+        </BirWrapTwo>
+      ) : (
+        <BirWrapTwo>
+          <Search placeholder="Search or jump to..." />
+          <SignBtn>Sign in</SignBtn>
+          <SignBtn>Sign up</SignBtn>
+        </BirWrapTwo>
+      )}
     </Wrapper>
   );
 }

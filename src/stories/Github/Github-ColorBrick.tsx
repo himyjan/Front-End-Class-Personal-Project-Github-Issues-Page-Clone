@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unused-prop-types */
 import styled from 'styled-components';
 
-const ColorSelector = styled.section`
+const ColorSelector = styled.div`
   width: 240px;
   height: 87px;
   background: white;

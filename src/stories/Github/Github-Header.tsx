@@ -46,7 +46,7 @@ const BigBellIcons = styled.img`
   }
 `;
 
-const BirWrapTwo = styled.section`
+const BirWrapTwo = styled.div`
   display: none;
   @media screen and (min-width: 768px) {
     display: flex;
@@ -71,7 +71,7 @@ const SmallGithubIcon = styled.img`
   }
 `;
 
-const BigWrapOne = styled.section`
+const BigWrapOne = styled.div`
   display: none;
   @media screen and (min-width: 768px) {
     display: flex;

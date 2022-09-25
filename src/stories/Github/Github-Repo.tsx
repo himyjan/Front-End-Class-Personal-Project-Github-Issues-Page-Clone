@@ -53,7 +53,7 @@ const RepoLogo = styled.img`
   }
 `;
 
-const TitleWrapper = styled.section`
+const TitleWrapper = styled.div`
   display: flex;
   padding: 16px;
   align-items: center;

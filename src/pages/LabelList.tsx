@@ -16,7 +16,7 @@ import { useOnClickOutside } from 'usehooks-ts';
 import api from '../utils/api';
 import ColorBricksNoProps from './ColorBricksNoProps';
 
-const BigWrapper = styled.section`
+const BigWrapper = styled.div`
   @media screen and (min-width: 768px) {
     display: flex;
     align-items: center;
@@ -25,7 +25,7 @@ const BigWrapper = styled.section`
   }
 `;
 
-const ButtonWrapper = styled.section`
+const ButtonWrapper = styled.div`
   display: flex;
   @media screen and (min-width: 768px) {
   }
@@ -137,7 +137,7 @@ const ColorRoller = styled.div`
   }
 `;
 
-const ColorInputSection = styled.section`
+const ColorInputSection = styled.div`
   display: flex;
   flex-direction: column;
   margin: 0 16px 16px 16px;
@@ -146,7 +146,7 @@ const ColorInputSection = styled.section`
   }
 `;
 
-const LabelInputSection = styled.section`
+const LabelInputSection = styled.div`
   display: flex;
   flex-direction: column;
   margin: 16px;
@@ -190,7 +190,7 @@ type NewLabel = {
   labelIndex: any;
 };
 
-const NewLabelSection = styled.section<NewLabel>`
+const NewLabelSection = styled.div<NewLabel>`
   display: ${(props) =>
     props.areaOpen && props.index === props.labelIndex ? 'flex' : 'none'};
   flex-direction: column;
@@ -255,7 +255,7 @@ const DropDown = styled.div`
   @media screen and (min-width: 1012px) {
   }
 `;
-const OuterWrapper = styled.section`
+const OuterWrapper = styled.div`
   width: 15%;
   height: 24px;
   /* margin-top: 25px; */
@@ -404,7 +404,7 @@ type NewLabels = {
   labelIndex: any;
 };
 
-const Wrapper = styled.section<NewLabels>`
+const Wrapper = styled.div<NewLabels>`
   width: 95vw;
   height: ${(props) =>
     props.areaOpen && props.index === props.labelIndex ? '339px' : '61px'};

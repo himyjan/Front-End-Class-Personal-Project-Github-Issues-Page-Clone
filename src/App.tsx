@@ -23,13 +23,13 @@ const App: FunctionComponent<IApplicationProps> = (props: any) => {
       <Route
         path="/"
         element={
-          <AuthRoute>
+          <>
             <Header />
             <Option />
             <LabelButtons />
             <BoxHeader />
             <Footer />
-          </AuthRoute>
+          </>
         }
       />
       <Route path="/login" element={<Login />} />

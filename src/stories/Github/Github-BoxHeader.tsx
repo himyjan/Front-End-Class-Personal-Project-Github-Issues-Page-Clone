@@ -37,7 +37,7 @@ const HeaderText = styled.span`
   }
 `;
 
-const Wrapper = styled.section`
+const Wrapper = styled.div`
   width: 100%;
   margin: 16px auto 0 auto;
   background: white;
