@@ -3,6 +3,12 @@ import {
   ChevronLeftIcon,
   ChevronRightIcon,
   IssueOpenedIcon,
+  GitPullRequestIcon,
+  CommentDiscussionIcon,
+  PlayIcon,
+  TableIcon,
+  ShieldIcon,
+  GraphIcon,
 } from '@primer/octicons-react';
 
 const IssueIMG = styled(IssueOpenedIcon)`
@@ -66,7 +72,14 @@ const Wrapper = styled.section`
   }
 `;
 
-export const Option = () => {
+type OptionProps = {
+  /**
+   * Is this the principal call to action on the page?
+   */
+  TEXT: string;
+};
+
+export const Option = ({ TEXT = 'Issues', ...props }: OptionProps) => {
   return (
     <Wrapper>
       <CodeSection>
@@ -76,7 +89,31 @@ export const Option = () => {
       </CodeSection>
       <CodeSection>
         <IssueIMG />
-        <CodeText>Issues</CodeText>
+        <CodeText>{TEXT}</CodeText>
+      </CodeSection>
+      <CodeSection>
+        <GitPullRequestIcon />
+        <CodeText>Pull requests</CodeText>
+      </CodeSection>
+      <CodeSection>
+        <CommentDiscussionIcon />
+        <CodeText>Discussions</CodeText>
+      </CodeSection>
+      <CodeSection>
+        <PlayIcon />
+        <CodeText>Actions</CodeText>
+      </CodeSection>
+      <CodeSection>
+        <TableIcon />
+        <CodeText>Projects</CodeText>
+      </CodeSection>
+      <CodeSection>
+        <ShieldIcon />
+        <CodeText>Security</CodeText>
+      </CodeSection>
+      <CodeSection>
+        <GraphIcon />
+        <CodeText>Insight</CodeText>
       </CodeSection>
     </Wrapper>
   );

@@ -160,7 +160,14 @@ const Wrapper = styled.div`
   }
 `;
 
-export const Header = () => {
+type HeaderProps = {
+  /**
+   * Is this the principal call to action on the page?
+   */
+  TEXT: string;
+};
+
+export const Header = ({ TEXT = 'Issues', ...props }: HeaderProps) => {
   return (
     <Wrapper>
       <BigWrapOne>
@@ -168,7 +175,7 @@ export const Header = () => {
         <Search placeholder="Search or jump to..." />
         <DiffIgnoredIcon size={20} />
         <HeaderText>Pull requests</HeaderText>
-        <HeaderText>Issues</HeaderText>
+        <HeaderText>{TEXT}</HeaderText>
         <HeaderText>Marketplace</HeaderText>
         <HeaderText>Explore</HeaderText>
       </BigWrapOne>

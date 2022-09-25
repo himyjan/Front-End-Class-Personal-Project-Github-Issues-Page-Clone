@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { MarkGithubIcon } from '@primer/octicons-react';
 
 const FooterText = styled.span`
   font-size: 6px;
@@ -24,13 +25,31 @@ const FooterLine = styled.div`
   }
 `;
 
-export const Footer = () => {
+type FooterProps = {
+  /**
+   * Is this the principal call to action on the page?
+   */
+  TEXT: string;
+};
+
+export const Footer = ({ TEXT = 'Terms', ...props }: FooterProps) => {
   return (
     <>
       <FooterLine />
       <FooterInfo>
-        <FooterText>Terms</FooterText>
+        <FooterText>{TEXT}</FooterText>
+        <FooterText>Privacy</FooterText>
+        <FooterText>Security</FooterText>
+        <FooterText>Status</FooterText>
+        <FooterText>Docs</FooterText>
+        <FooterText>Contract Github</FooterText>
+        <FooterText>Pricing</FooterText>
+        <FooterText>API</FooterText>
+        <FooterText>Training</FooterText>
+        <FooterText>Blog</FooterText>
+        <FooterText>About</FooterText>
       </FooterInfo>
+      <MarkGithubIcon size={40} fill="gray" />
     </>
   );
 };
