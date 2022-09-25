@@ -1,11 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { ThemeProvider } from 'styled-components';
 import App from './App';
 import Login from './pages/Login';
 import ErrorPage from './pages/ErrorPage';
 import GlobalStyle from './styledComponents/GlobalStyle.style';
 import './styles/globals.css';
+
+import { getTheme } from './styledComponents/themes/index';
 
 const router = createBrowserRouter([
   {
@@ -26,7 +29,11 @@ const root = ReactDOM.createRoot(
 
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
-    <GlobalStyle />
+    <ThemeProvider theme={getTheme('light')}>
+      <>
+        <RouterProvider router={router} />
+        <GlobalStyle />
+      </>
+    </ThemeProvider>
   </React.StrictMode>
 );
