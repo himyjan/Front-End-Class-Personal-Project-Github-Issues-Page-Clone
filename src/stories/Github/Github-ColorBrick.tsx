@@ -24,6 +24,7 @@ const DefaultColorText = styled.div`
 type ColorBoxProp = {
   colors: string;
 };
+
 const ColorBox = styled.div<ColorBoxProp>`
   background: ${(props) => props.colors};
   width: 12px;

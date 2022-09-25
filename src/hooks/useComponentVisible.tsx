@@ -1,7 +1,7 @@
 import { useEffect, useState, useRef } from 'react';
 import { useOnClickOutside } from 'usehooks-ts';
 
-export function useComponentVisible(initialIsVisible: any) {
+export function useComponentVisible(initialIsVisible: unknown) {
   const [isComponentVisible, setIsComponentVisible] =
     useState(initialIsVisible);
   // useEffect(() => console.log(initialIsVisible), [initialIsVisible]);

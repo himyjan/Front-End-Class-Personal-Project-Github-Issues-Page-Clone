@@ -6,7 +6,6 @@ import {
 } from '@primer/octicons-react';
 
 const IssueIMG = styled(IssueOpenedIcon)`
-  display: none;
   margin-right: 5px;
   @media screen and (min-width: 543) {
     width: 15px;

@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import styled from 'styled-components';
 import { TriangleDownIcon } from '@primer/octicons-react';
-import { useSelector } from 'react-redux';
+// import { useSelector } from 'react-redux';
 import { useEffect, useState } from 'react';
 import LabelList from './LabelList';
 import api from '../utils/api';
@@ -69,19 +69,28 @@ const Header = styled.div`
 `;
 
 function BoxHeader() {
-  const updatedLabels: any = useSelector((state) => state);
+  // const updatedLabels: unknown = useSelector((state) => state);
   const [labels, setLabel]: any = useState();
   useEffect(() => setLabel(labels), []);
   useEffect(() => {
     (async () => {
-      setLabel(await api.getRepoAllIssueLabel('emil0519', 'testing-issues'));
+      setLabel(
+        await api.getRepoAllIssueLabel(
+          'himyjan',
+          'Front-End-Class-Personal-Project-Github-Issues-Page-Clone'
+        )
+      );
     })().catch((error) => console.log(error));
   }, []);
+  // useEffect(() => {
+  //   setLabel(updatedLabels);
+  //   // 每次有新label的時候會re-render一次
+  // }, [updatedLabels]);
   useEffect(() => {
-    setLabel(updatedLabels);
-    // 每次有新label的時候會re-render一次
-  }, [updatedLabels]);
-
+    if (typeof labels === 'string') {
+      setLabel(JSON.parse(labels));
+    }
+  }, []);
   if (labels === undefined) {
     return null;
   }
@@ -101,6 +110,5 @@ function BoxHeader() {
     </Wrapper>
   );
 }
-// }
 
 export default BoxHeader;

@@ -3,7 +3,6 @@ import { FunctionComponent } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { initializeApp } from 'firebase/app';
 import Header from 'pages/Header';
-import Repo from 'pages/Repo';
 import Option from 'pages/Option';
 import LabelButtons from 'pages/LabelButtons';
 import BoxHeader from 'pages/BoxHeader';
@@ -26,7 +25,6 @@ const App: FunctionComponent<IApplicationProps> = (props: any) => {
         element={
           <AuthRoute>
             <Header />
-            <Repo />
             <Option />
             <LabelButtons />
             <BoxHeader />
