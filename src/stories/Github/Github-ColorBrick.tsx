@@ -28,70 +28,79 @@ type Color = {
   colorCode: string;
 };
 
-export const ColorBrick = () => {
-  const solidColorList: Color[] = [
-    {
-      colorCode: '#b6070c',
-    },
-    {
-      colorCode: '#d94017',
-    },
-    {
-      colorCode: '#fbca31',
-    },
-    {
-      colorCode: '#0e8a25',
-    },
-    {
-      colorCode: '#006b75',
-    },
-    {
-      colorCode: '#1b76d8',
-    },
-    {
-      colorCode: '#0052c8',
-    },
-    {
-      colorCode: '#521be2',
-    },
-  ];
+const solidColorList: Color[] = [
+  {
+    colorCode: '#b6070c',
+  },
+  {
+    colorCode: '#d94017',
+  },
+  {
+    colorCode: '#fbca31',
+  },
+  {
+    colorCode: '#0e8a25',
+  },
+  {
+    colorCode: '#006b75',
+  },
+  {
+    colorCode: '#1b76d8',
+  },
+  {
+    colorCode: '#0052c8',
+  },
+  {
+    colorCode: '#521be2',
+  },
+];
 
-  const lightColorList: Color[] = [
-    {
-      colorCode: '#e99796',
-    },
-    {
-      colorCode: '#f9d0c5',
-    },
-    {
-      colorCode: '#fef2c3',
-    },
-    {
-      colorCode: '#c2e0c7',
-    },
-    {
-      colorCode: '#bfdadc',
-    },
-    {
-      colorCode: '#c5def4',
-    },
-    {
-      colorCode: '#bfd4f1',
-    },
-    {
-      colorCode: '#d4c5f7',
-    },
-  ];
+const lightColorList: Color[] = [
+  {
+    colorCode: '#e99796',
+  },
+  {
+    colorCode: '#f9d0c5',
+  },
+  {
+    colorCode: '#fef2c3',
+  },
+  {
+    colorCode: '#c2e0c7',
+  },
+  {
+    colorCode: '#bfdadc',
+  },
+  {
+    colorCode: '#c5def4',
+  },
+  {
+    colorCode: '#bfd4f1',
+  },
+  {
+    colorCode: '#d4c5f7',
+  },
+];
 
+type BoxHeaderProps = {
+  SOLIDCOLORLIST: Color[];
+  LIGHTCOLORLIST: Color[];
+};
+
+export const ColorBrick = ({
+  SOLIDCOLORLIST = solidColorList,
+  LIGHTCOLORLIST = lightColorList,
+  ...props
+}: BoxHeaderProps) => {
   return (
     <>
       <DefaultColor>
-        {solidColorList.map(({ colorCode }: Color, index: number) => {
+        {SOLIDCOLORLIST.map(({ colorCode }: Color, index: number) => {
           return <ColorBox key={colorCode} colors={colorCode} />;
         })}
       </DefaultColor>
       <DefaultColor>
-        {lightColorList.map(({ colorCode }: Color) => {
+        {LIGHTCOLORLIST.map(({ colorCode }: Color) => {
           return <ColorBox key={colorCode} colors={colorCode} />;
         })}
       </DefaultColor>
