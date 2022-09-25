@@ -1,6 +1,29 @@
 /* eslint-disable react/no-unused-prop-types */
 import styled from 'styled-components';
 
+const ColorSelector = styled.section`
+  width: 240px;
+  height: 87px;
+  background: white;
+  position: absolute;
+  top: 110%;
+  left: 187px;
+  border: 0.5px solid #cad1d9;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  @media screen and (min-width: 768px) {
+  }
+`;
+
+const DefaultColorText = styled.div`
+  color: #57606a;
+  font-size: 8px;
+  margin: 8px auto 4px 8px;
+  @media screen and (min-width: 768px) {
+  }
+`;
+
 type ColorBoxProp = {
   colors: string;
 };
@@ -93,7 +116,8 @@ export const ColorBrick = ({
   ...props
 }: BoxHeaderProps) => {
   return (
-    <>
+    <ColorSelector>
+      <DefaultColorText>Choose from default colors:</DefaultColorText>
       <DefaultColor>
         {SOLIDCOLORLIST.map(({ colorCode }: Color, index: number) => {
           return <ColorBox key={colorCode} colors={colorCode} />;
@@ -104,6 +128,6 @@ export const ColorBrick = ({
           return <ColorBox key={colorCode} colors={colorCode} />;
         })}
       </DefaultColor>
-    </>
+    </ColorSelector>
   );
 };
