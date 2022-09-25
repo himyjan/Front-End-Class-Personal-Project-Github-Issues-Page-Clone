@@ -1,5 +1,6 @@
 import { themes } from '@storybook/theming';
 import { initialize, mswDecorator } from 'msw-storybook-addon';
+import '@storybook/addon-console';
 
 import '!style-loader!css-loader!postcss-loader!tailwindcss/tailwind.css';
 import 'tailwindcss/tailwind.css';
