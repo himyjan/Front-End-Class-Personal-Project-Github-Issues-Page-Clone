@@ -180,15 +180,12 @@ export const Header = ({ TEXT = 'Issues', ...props }: HeaderProps) => {
         <HeaderText>Explore</HeaderText>
       </BigWrapOne>
       <BirWrapTwo>
-        <BellIcon size={16} />
-        <PlusIcon size={16} />
-        <TriangleDownIcon size={16} />
-        <CopilotIcon size={20} />
-        <TriangleDownIcon size={16} />
+        <BellIcon size={16} fill="white" />
+        <PlusIcon size={16} fill="white" />
+        <TriangleDownIcon size={16} fill="white" />
+        <CopilotIcon size={20} fill="white" />
+        <TriangleDownIcon size={16} fill="white" />
       </BirWrapTwo>
-      <ThreeBarsIcon size={24} />
-      <MarkGithubIcon size={16} fill="white" />
-      <BellIcon size={16} />
     </Wrapper>
   );
 };
