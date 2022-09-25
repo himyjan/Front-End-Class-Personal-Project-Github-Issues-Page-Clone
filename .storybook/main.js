@@ -24,7 +24,6 @@ module.exports = {
     '@storybook/addon-a11y',
     'storybook-addon-themes',
     'storybook-addon-designs',
-    'addon-screen-reader',
   ],
   framework: {
     name: '@storybook/react-webpack5',
