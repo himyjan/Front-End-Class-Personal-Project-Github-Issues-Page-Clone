@@ -5,9 +5,6 @@ const ColorSelector = styled.section`
   width: 240px;
   height: 87px;
   background: white;
-  position: absolute;
-  top: 110%;
-  left: 187px;
   border: 0.5px solid #cad1d9;
   border-radius: 5px;
   display: flex;
