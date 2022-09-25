@@ -6,7 +6,7 @@ import '!style-loader!css-loader!postcss-loader!tailwindcss/tailwind.css';
 import 'tailwindcss/tailwind.css';
 
 // .storybook/preview.js
-import { Suspense, useEffect } from 'react';
+import React, { Suspense, useEffect } from 'react';
 import { I18nextProvider } from 'react-i18next';
 import i18n from '../src/i18n';
 

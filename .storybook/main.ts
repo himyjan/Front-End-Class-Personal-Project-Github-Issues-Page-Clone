@@ -35,6 +35,8 @@ module.exports = {
   },
   core: {
     builder: '@storybook/builder-webpack5',
+    // // we don't want to muck up the data when we're working on the builder-vite
+    // disableTelemetry: true,
   },
   features: {
     previewMdx2: true,
@@ -49,7 +51,8 @@ module.exports = {
     ];
     return config;
   },
-  // async viteFinal(config) {
+  // async viteFinal(config, { configType }) {
+  //   // customize the Vite config here
   //   return mergeConfig(config, {
   //     plugins: [tsconfigPaths()],
   //   });
