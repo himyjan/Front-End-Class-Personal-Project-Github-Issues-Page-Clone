@@ -1,17 +1,17 @@
 /* eslint-disable storybook/story-exports */
 /* eslint-disable @typescript-eslint/dot-notation */
-import { Footer } from './Footer';
+import { Repo } from './Github-Repo';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-  title: 'Github/Footer',
-  component: Footer,
+  title: 'Github/Repo',
+  component: Repo,
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   argTypes: {},
 };
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-const Template = (args) => <Footer {...args} />;
+const Template = (args) => <Repo {...args} />;
 
 export const Light = Template.bind({});
 // export const Primary = Template.bind({});

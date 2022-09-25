@@ -1,6 +1,6 @@
 /* eslint-disable storybook/story-exports */
 /* eslint-disable @typescript-eslint/dot-notation */
-import { Option } from './Option';
+import { Option } from './Github-Option';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {

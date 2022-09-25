@@ -1,6 +1,6 @@
 /* eslint-disable storybook/story-exports */
 /* eslint-disable @typescript-eslint/dot-notation */
-import { Header } from './Header';
+import { Header } from './Github-Header';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
