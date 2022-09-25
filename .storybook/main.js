@@ -1,6 +1,10 @@
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 const path = require('path');
 
+// const viteTsconfig = require('vite-tsconfig-paths');
+// const tsconfigPaths = viteTsconfig.default;
+// const { mergeConfig } = require('vite');
+
 module.exports = {
   stories: ['../src/**/*.stories.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'],
   addons: [
@@ -32,6 +36,10 @@ module.exports = {
   core: {
     builder: '@storybook/builder-webpack5',
   },
+  features: {
+    previewMdx2: true,
+    storyStoreV7: true,
+  },
   webpackFinal: async (config) => {
     config.resolve.plugins = [
       ...(config.resolve.plugins || []),
@@ -41,4 +49,9 @@ module.exports = {
     ];
     return config;
   },
+  // async viteFinal(config) {
+  //   return mergeConfig(config, {
+  //     plugins: [tsconfigPaths()],
+  //   });
+  // },
 };
