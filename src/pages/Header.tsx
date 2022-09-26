@@ -182,10 +182,11 @@ const SignBtn = styled.div`
 function Header() {
   const navigate = useNavigate();
   const cookies = parseCookies();
+  let photoURL = '';
 
   if (cookies?.logged_in === 'yes') {
     const auth = getAuth();
-    console.log(auth['currentUser']);
+    photoURL = auth['currentUser']?.['photoURL'] as string;
   }
 
   function oAuthLogin() {
@@ -212,7 +213,7 @@ function Header() {
           <BellIcon size={16} fill="white" />
           <PlusIcon size={16} fill="white" />
           <TriangleDownIcon size={16} fill="white" />
-          <CopilotIcon size={20} fill="white" />
+          <Avatar alt="" src={photoURL} />
           <TriangleDownIcon size={16} fill="white" />
         </BirWrapTwo>
       ) : (
