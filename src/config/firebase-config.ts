@@ -1,11 +1,11 @@
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: 'AIzaSyAbyD01kz_GCIkoKaFePt3Y_oltwu7XzZE',
-  authDomain: 'github-issues-page-clone-fa078.firebaseapp.com',
-  projectId: 'github-issues-page-clone-fa078',
-  storageBucket: 'github-issues-page-clone-fa078.appspot.com',
-  messagingSenderId: '100602688753',
-  appId: '1:100602688753:web:15ed3557a931b0df3f2550',
+  apiKey: 'AIzaSyC21y-xGqNnRjy-bCj5l1xN7C0qt2dHy9g',
+  authDomain: 'github-issues-page-46712.firebaseapp.com',
+  projectId: 'github-issues-page-46712',
+  storageBucket: 'github-issues-page-46712.appspot.com',
+  messagingSenderId: '677806110443',
+  appId: '1:677806110443:web:efe140760fff7a9d4330ae',
 };
 
 export default firebaseConfig;
