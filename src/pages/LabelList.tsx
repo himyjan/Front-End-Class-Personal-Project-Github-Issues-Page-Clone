@@ -729,8 +729,6 @@ function LabelList() {
   // }, [updatedLabels]);
   const [updateLabelInfo, setUpdateLabelInfo]: any = useState();
 
-  useEffect(() => console.log(updateLabelInfo), [updateLabelInfo]);
-
   // function toUpdateInfo(types: any, index: any, value: any) {
   //   let newInfo = [...updateLabelInfo];
   //   if (types === "name") {
@@ -784,21 +782,21 @@ function LabelList() {
   }, []);
   // 第一次setLabel
 
-  useEffect(() => {
-    if (label !== undefined) {
-      console.log('firs render');
-      // setUpdateLabelInfo(
-      //   label.map((item: any) => {
-      //     return {
-      //       name: item.name,
-      //       description: item.description,
-      //       color: item.color,
-      //       new_name: item.name,
-      //     };
-      //   })
-      // );
-    }
-  }, [label]);
+  // useEffect(() => {
+  //   if (label !== undefined) {
+  //     console.log('first render');
+  //     // setUpdateLabelInfo(
+  //     //   label.map((item: any) => {
+  //     //     return {
+  //     //       name: item.name,
+  //     //       description: item.description,
+  //     //       color: item.color,
+  //     //       new_name: item.name,
+  //     //     };
+  //     //   })
+  //     // );
+  //   }
+  // }, [label]);
 
   // useEffect(() => {
   //   if (updatedLabels === undefined) {
@@ -810,7 +808,7 @@ function LabelList() {
   //   }
   // }, [updatedLabels]);
 
-  useEffect(() => console.log(updateLabelInfo), [updateLabelInfo]);
+  // useEffect(() => console.log(updateLabelInfo), [updateLabelInfo]);
 
   if (label === undefined || updateLabelInfo === undefined) {
     return <h1>Loading</h1>;

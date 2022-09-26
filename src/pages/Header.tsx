@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/dot-notation */
 import styled from 'styled-components';
 import {
   DiffIgnoredIcon,
@@ -10,6 +11,7 @@ import {
 } from '@primer/octicons-react';
 import { parseCookies, setCookie, destroyCookie } from 'nookies';
 import { useNavigate } from 'react-router-dom';
+import { getAuth, onAuthStateChanged } from 'firebase/auth';
 
 // import searchButton from "../img/searchButton.png"
 
@@ -181,9 +183,12 @@ function Header() {
   const navigate = useNavigate();
   const cookies = parseCookies();
 
-  function oAuthLogin() {
-    console.log('oaTuh login');
+  if (cookies?.logged_in === 'yes') {
+    const auth = getAuth();
+    console.log(auth['currentUser']);
+  }
 
+  function oAuthLogin() {
     navigate('/login');
   }
 
