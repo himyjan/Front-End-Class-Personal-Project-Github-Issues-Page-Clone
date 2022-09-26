@@ -4,7 +4,7 @@ import { BoxHeader } from './Github-BoxHeader';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-  title: 'Github/BoxHeader',
+  title: 'Github-Issue-Label/BoxHeader',
   component: BoxHeader,
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   argTypes: {},
