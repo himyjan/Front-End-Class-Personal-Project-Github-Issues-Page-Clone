@@ -3,6 +3,12 @@ import {
   ChevronLeftIcon,
   ChevronRightIcon,
   IssueOpenedIcon,
+  GitPullRequestIcon,
+  CommentDiscussionIcon,
+  PlayIcon,
+  TableIcon,
+  ShieldIcon,
+  GraphIcon,
 } from '@primer/octicons-react';
 
 const IssueIMG = styled(IssueOpenedIcon)`
@@ -33,7 +39,8 @@ const CodeLeftIMG = styled(ChevronLeftIcon)`
   /* imported icon cannot be displayed none, need to fix afterwards */
 `;
 
-const CodeText = styled.span`
+const CodeText = styled.div`
+  display: inline-block;
   color: black;
   font-size: 16px;
   @media screen and (min-width: 768px) {
@@ -76,6 +83,30 @@ function Option() {
       <CodeSection>
         <IssueIMG />
         <CodeText>Issues</CodeText>
+      </CodeSection>
+      <CodeSection>
+        <GitPullRequestIcon />
+        <CodeText>Pull requests</CodeText>
+      </CodeSection>
+      <CodeSection>
+        <CommentDiscussionIcon />
+        <CodeText>Discussions</CodeText>
+      </CodeSection>
+      <CodeSection>
+        <PlayIcon />
+        <CodeText>Actions</CodeText>
+      </CodeSection>
+      <CodeSection>
+        <TableIcon />
+        <CodeText>Projects</CodeText>
+      </CodeSection>
+      <CodeSection>
+        <ShieldIcon />
+        <CodeText>Security</CodeText>
+      </CodeSection>
+      <CodeSection>
+        <GraphIcon />
+        <CodeText>Insight</CodeText>
       </CodeSection>
     </Wrapper>
   );

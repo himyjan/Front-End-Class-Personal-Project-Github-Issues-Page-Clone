@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { RepoIcon } from '@primer/octicons-react';
 
-const RepoType = styled.span`
+const RepoType = styled.div`
   font-size: 14px;
   color: #4d555e;
   border: 0.5px solid #cad1d9;
@@ -12,7 +12,7 @@ const RepoType = styled.span`
   }
 `;
 
-const RepoName = styled.span`
+const RepoName = styled.div`
   font-weight: 700;
   font-size: 20px;
   color: #1760cf;
@@ -25,7 +25,7 @@ const RepoName = styled.span`
   }
 `;
 
-const Slash = styled.span`
+const Slash = styled.div`
   font-size: 20px;
   color: #4d555e;
   margin: 0 2px;
@@ -33,7 +33,7 @@ const Slash = styled.span`
   }
 `;
 
-const UserName = styled.span`
+const UserName = styled.div`
   font-size: 20px;
   color: #1760cf;
   cursor: pointer;

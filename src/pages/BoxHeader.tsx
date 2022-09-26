@@ -14,7 +14,7 @@ const SortDown = styled(TriangleDownIcon)`
   }
 `;
 
-const SortText = styled.span`
+const SortText = styled.div`
   display: flex;
   color: #4d555e;
   font-size: 10px;
@@ -33,7 +33,7 @@ const SortSection = styled.div`
   }
 `;
 
-const HeaderText = styled.span`
+const HeaderText = styled.div`
   color: black;
   font-size: 14px;
   font-weight: 700;

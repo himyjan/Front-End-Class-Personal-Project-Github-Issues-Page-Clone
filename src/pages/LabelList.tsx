@@ -31,7 +31,7 @@ const ButtonWrapper = styled.div`
   }
 `;
 
-const CancelText = styled.span`
+const CancelText = styled.div`
   color: black;
   font-size: 14px;
   font-weight: 700;
@@ -54,7 +54,7 @@ const CancelButton = styled.div`
   }
 `;
 
-const CreateLabelText = styled.span`
+const CreateLabelText = styled.div`
   color: white;
   font-size: 14px;
   font-weight: 700;
@@ -207,7 +207,7 @@ type Visible = {
   editVisible: boolean;
 };
 
-const DropDownText = styled.span<Visible>`
+const DropDownText = styled.div<Visible>`
   padding: 8px;
   width: 158px;
   height: 34px;
@@ -223,7 +223,7 @@ const DropDownText = styled.span<Visible>`
   }
 `;
 
-const DeleteText = styled.span`
+const DeleteText = styled.div`
   padding: 8px;
   width: 158px;
   height: 34px;
@@ -277,7 +277,7 @@ type BigSortter = {
   index: number;
 };
 
-const BigSortText = styled.span<BigSortter>`
+const BigSortText = styled.div<BigSortter>`
   display: none;
   @media screen and (min-width: 1012px) {
     display: ${(props) =>
@@ -306,7 +306,7 @@ const BigSort = styled.div`
   }
 `;
 
-const Notification = styled.span`
+const Notification = styled.div`
   display: none;
   @media screen and (min-width: 768px) {
     display: block;
@@ -320,7 +320,7 @@ const Notification = styled.span`
   }
 `;
 
-const LabelDes = styled.span`
+const LabelDes = styled.div`
   display: none;
   @media screen and (min-width: 768px) {
     display: block;
@@ -331,7 +331,7 @@ const LabelDes = styled.span`
   }
 `;
 
-const SortText = styled.span`
+const SortText = styled.div`
   font-size: 24px;
   margin-bottom: 12px;
 `;
@@ -366,7 +366,7 @@ const Sort = styled.div<Sorter>`
   }
 `;
 
-const LabelText = styled.span`
+const LabelText = styled.div`
   font-size: 12px;
   font-weight: 700;
   color: ${(props) => (props.color === 'ffffff' ? 'black' : 'white')};

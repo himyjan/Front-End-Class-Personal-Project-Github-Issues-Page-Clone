@@ -74,7 +74,7 @@ const ButtonWrapper = styled.div`
   }
 `;
 
-const CancelText = styled.span`
+const CancelText = styled.div`
   color: black;
   font-size: 14px;
   font-weight: 700;
@@ -97,7 +97,7 @@ const CancelButton = styled.div`
   }
 `;
 
-const CreateLabelText = styled.span`
+const CreateLabelText = styled.div`
   color: white;
   font-size: 14px;
   font-weight: 700;
@@ -298,7 +298,7 @@ const SubWrapOne = styled.div`
   }
 `;
 
-const NewLabelText = styled.span`
+const NewLabelText = styled.div`
   font-size: 14px;
   font-weight: 600;
   color: white;
@@ -327,7 +327,7 @@ const NewLabel = styled.div`
   }
 `;
 
-const MileText = styled.span`
+const MileText = styled.div`
   color: black;
   font-size: 14px;
   font-weight: 600;
@@ -368,7 +368,7 @@ const MileStoneIMG = styled(MilestoneIcon)`
   }
 `;
 
-const LabelText = styled.span`
+const LabelText = styled.div`
   font-size: 14px;
   font-weight: 600;
   color: white;

@@ -9,6 +9,7 @@ import {
   TriangleDownIcon,
 } from '@primer/octicons-react';
 import { parseCookies, setCookie, destroyCookie } from 'nookies';
+import { useNavigate } from 'react-router-dom';
 
 // import searchButton from "../img/searchButton.png"
 
@@ -80,7 +81,7 @@ const BigWrapOne = styled.div`
   }
 `;
 
-const HeaderText = styled.span`
+const HeaderText = styled.div`
   display: none;
   @media screen and (min-width: 768px) {
     display: block;
@@ -163,30 +164,37 @@ const Wrapper = styled.div`
 `;
 
 const SignBtn = styled.div`
-  color: #ffffff;
-  width: 54.648px;
-  height: 24px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: none;
+
   @media screen and (min-width: 768px) {
-    display: none;
+    cursor: pointer;
+    color: #ffffff;
+    width: 54.648px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 `;
 
 function Header() {
+  const navigate = useNavigate();
   const cookies = parseCookies();
 
-  console.log(cookies);
+  function oAuthLogin() {
+    navigate('/login');
+  }
 
   return (
     <Wrapper>
       <BigWrapOne>
         <MarkGithubIcon size={35} fill="white" />
         {cookies?.logged_in === 'yes' ? (
-          <Search placeholder="Search or jump to..." />
+          <>
+            <Search placeholder="Search or jump to..." />
+            <DiffIgnoredIcon size={20} fill="white" />
+          </>
         ) : null}
-        <DiffIgnoredIcon size={20} />
         <HeaderText>Pull requests</HeaderText>
         <HeaderText>Issues</HeaderText>
         <HeaderText>Marketplace</HeaderText>
@@ -203,8 +211,9 @@ function Header() {
       ) : (
         <BirWrapTwo>
           <Search placeholder="Search or jump to..." />
-          <SignBtn>Sign in</SignBtn>
-          <SignBtn>Sign up</SignBtn>
+          <DiffIgnoredIcon size={20} fill="white" />
+          <SignBtn onClick={() => oAuthLogin}>Sign in</SignBtn>
+          <SignBtn onClick={() => oAuthLogin}>Sign up</SignBtn>
         </BirWrapTwo>
       )}
     </Wrapper>

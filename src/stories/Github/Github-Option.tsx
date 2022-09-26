@@ -40,7 +40,7 @@ const CodeLeftIMG = styled(ChevronLeftIcon)`
   /* imported icon cannot be displayed none, need to fix afterwards */
 `;
 
-const CodeText = styled.span`
+const CodeText = styled.div`
   color: black;
   font-size: 16px;
   @media screen and (min-width: 768px) {

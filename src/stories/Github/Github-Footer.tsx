@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { MarkGithubIcon } from '@primer/octicons-react';
 
-const FooterText = styled.span`
+const FooterText = styled.div`
   font-size: 6px;
   color: #1760cf;
   @media screen and (min-width: 768px) {

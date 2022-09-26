@@ -79,7 +79,7 @@ const BigWrapOne = styled.div`
   }
 `;
 
-const HeaderText = styled.span`
+const HeaderText = styled.div`
   display: none;
   @media screen and (min-width: 768px) {
     display: block;

@@ -15,7 +15,7 @@ const FooterWrapper = styled.div`
   }
 `;
 
-const GithubText = styled.span`
+const GithubText = styled.div`
   font-size: 9px;
   color: #57606a;
   @media screen and (min-width: 1012px) {
@@ -40,7 +40,7 @@ const GithubWrapper = styled.div`
   }
 `;
 
-const FooterText = styled.span`
+const FooterText = styled.div`
   font-size: 6px;
   margin-top: 5px;
   color: #1760cf;
