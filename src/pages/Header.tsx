@@ -182,6 +182,8 @@ function Header() {
   const cookies = parseCookies();
 
   function oAuthLogin() {
+    console.log('oaTuh login');
+
     navigate('/login');
   }
 
@@ -212,8 +214,8 @@ function Header() {
         <BirWrapTwo>
           <Search placeholder="Search or jump to..." />
           <DiffIgnoredIcon size={20} fill="white" />
-          <SignBtn onClick={() => oAuthLogin}>Sign in</SignBtn>
-          <SignBtn onClick={() => oAuthLogin}>Sign up</SignBtn>
+          <SignBtn onClick={() => oAuthLogin()}>Sign in</SignBtn>
+          <SignBtn onClick={() => oAuthLogin()}>Sign up</SignBtn>
         </BirWrapTwo>
       )}
     </Wrapper>
