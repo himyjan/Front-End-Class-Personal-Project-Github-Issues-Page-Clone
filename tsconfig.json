@@ -23,5 +23,5 @@
       // etc.
     }
   },
-  "include": ["src", "src/**/*.ts", "src/**/*.tsx", ".eslintrc.cts"]
+  "include": ["src", "src/**/*.ts", "src/**/*.tsx", ".eslintrc.cjs"]
 }
