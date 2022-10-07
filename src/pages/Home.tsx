@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/dot-notation */
 import { parseCookies, setCookie, destroyCookie } from 'nookies';
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
-import useSWR from 'swr';
-import ky from 'ky';
+// import useSWR from 'swr';
+import axios from 'axios';
 import store from '../store/store';
 import api from '../utils/api';
 
@@ -21,10 +21,10 @@ function Home() {
 
   const BASE_URL = 'https://api.github.com';
 
-  const kyClient = ky.create({ prefixUrl: BASE_URL });
+  const axiosClient = axios.create({ baseURL: BASE_URL });
 
   const fetcher = (url) =>
-    ky
+    axios
       .get(url, {
         headers: {
           Accept: 'application/vnd.github+json',
@@ -33,9 +33,9 @@ function Home() {
       })
       .then((res) => res['data']);
 
-  const { data, error } = useSWR([`https://api.github.com/user`], fetcher);
-  if (error) console.log(error);
-  if (data) console.log(data);
+  // const { data, error } = useSWR([`https://api.github.com/user`], fetcher);
+  // if (error) console.log(error);
+  // if (data) console.log(data);
 
   return (
     <>

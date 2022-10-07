@@ -6,32 +6,32 @@ import { parseCookies, setCookie, destroyCookie } from 'nookies';
 
 import { Octokit } from '@octokit/core';
 
-// import ky from 'ky';
+import axios from 'axios';
 
-// export const BASE_URL = 'https://api.github.com';
+export const BASE_URL = 'https://api.github.com';
 
 const cookies = parseCookies();
 
 const octokit = new Octokit({ auth: cookies.user_oauth_token });
 
-// const kyClient = ky.create({ prefixUrl: BASE_URL });
+const axiosClient = axios.create({ baseURL: BASE_URL });
 
-// const api = {
-//   BASE_URL: 'https://api.github.com',
-//   getUser: async () => {
-//     const response = await kyClient.post('user');
-//     console.log(response);
-//   },
-//   getIssue: async () => {
-//     const response = await kyClient.post('repos/OWNER/REPO/issues');
-//     console.log(response);
-//   },
-//   getLabels: async (OWNER: string, REPO: string) => {
-//     const response = await kyClient.get(`${OWNER}/${REPO}/labels`);
-//     console.log(response);
-//     // return await response.json();
-//   },
-// };
+const api = {
+  BASE_URL: 'https://api.github.com',
+  getUser: async () => {
+    const response = await axiosClient.post('user');
+    console.log(response);
+  },
+  getIssue: async () => {
+    const response = await axiosClient.post('repos/OWNER/REPO/issues');
+    console.log(response);
+  },
+  getLabels: async (OWNER: string, REPO: string) => {
+    const response = await axiosClient.get(`${OWNER}/${REPO}/labels`);
+    console.log(response);
+    // return await response.json();
+  },
+};
 
 const apiOctokit = {
   getUser: async () => {
