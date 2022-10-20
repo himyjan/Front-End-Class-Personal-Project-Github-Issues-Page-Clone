@@ -20,7 +20,7 @@
     "@types/node": "^18.11.0",
     "@types/react": "^18.0.21",
     "@types/react-dom": "^18.0.6",
-    "@unocss/preset-attributify": "^0.45.29",
+    "@unocss/preset-attributify": "^0.45.30",
     "@unocss/reset": "^0.45.30",
     "@unocss/webpack": "^0.45.30",
     "eslint": "^8.25.0",
@@ -28,6 +28,6 @@
     "next-transpile-modules": "^9.1.0",
     "tsconfig": "*",
     "typescript": "^4.8.4",
-    "unocss": "^0.45.29"
+    "unocss": "^0.45.30"
   }
 }
