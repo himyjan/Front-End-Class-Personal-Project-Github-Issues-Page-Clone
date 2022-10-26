@@ -22,7 +22,7 @@
     "@types/react-dom": "^18.0.6",
     "@unocss/preset-attributify": "^0.46.0",
     "@unocss/reset": "^0.46.0",
-    "@unocss/webpack": "^0.45.30",
+    "@unocss/webpack": "^0.46.0",
     "eslint": "^8.25.0",
     "eslint-config-custom": "*",
     "next-transpile-modules": "^9.1.0",
