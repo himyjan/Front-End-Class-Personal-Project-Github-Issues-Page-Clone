@@ -21,7 +21,7 @@
     "@types/react": "^18.0.24",
     "@types/react-dom": "^18.0.8",
     "@unocss/preset-attributify": "^0.46.2",
-    "@unocss/reset": "^0.46.0",
+    "@unocss/reset": "^0.46.2",
     "@unocss/webpack": "^0.46.1",
     "eslint": "^8.26.0",
     "eslint-config-custom": "*",
