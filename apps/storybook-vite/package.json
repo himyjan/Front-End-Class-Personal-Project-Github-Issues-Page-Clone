@@ -19,7 +19,7 @@
     "@storybook/addon-interactions": "^7.0.0-alpha.48",
     "@storybook/addon-links": "^7.0.0-alpha.48",
     "@storybook/builder-vite": "^7.0.0-alpha.46",
-    "@storybook/mdx2-csf": "^0.1.0-next.3",
+    "@storybook/mdx2-csf": "^0.1.0-next.5",
     "@storybook/react": "^7.0.0-alpha.48",
     "@storybook/react-vite": "^7.0.0-alpha.48",
     "@storybook/testing-library": "^0.0.13",
