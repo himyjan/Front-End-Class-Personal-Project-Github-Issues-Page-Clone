@@ -16,12 +16,12 @@
   "devDependencies": {
     "@mdx-js/react": "^2.1.5",
     "@storybook/addon-essentials": "^7.0.0-alpha.49",
-    "@storybook/addon-interactions": "^7.0.0-alpha.48",
-    "@storybook/addon-links": "^7.0.0-alpha.48",
-    "@storybook/builder-vite": "^7.0.0-alpha.46",
+    "@storybook/addon-interactions": "^7.0.0-alpha.49",
+    "@storybook/addon-links": "^7.0.0-alpha.49",
+    "@storybook/builder-vite": "^7.0.0-alpha.49",
     "@storybook/mdx2-csf": "^0.1.0-next.5",
-    "@storybook/react": "^7.0.0-alpha.48",
-    "@storybook/react-vite": "^7.0.0-alpha.48",
+    "@storybook/react": "^7.0.0-alpha.49",
+    "@storybook/react-vite": "^7.0.0-alpha.49",
     "@storybook/testing-library": "^0.0.13",
     "storybook": "^7.0.0-alpha.49",
     "vite": "^3.2.3"
