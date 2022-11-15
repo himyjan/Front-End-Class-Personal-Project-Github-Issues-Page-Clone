@@ -23,7 +23,7 @@
     "@unocss/preset-attributify": "^0.46.4",
     "@unocss/reset": "^0.46.2",
     "@unocss/webpack": "^0.46.4",
-    "eslint": "^8.26.0",
+    "eslint": "^8.27.0",
     "eslint-config-custom": "*",
     "next-transpile-modules": "^10.0.0",
     "tsconfig": "*",
