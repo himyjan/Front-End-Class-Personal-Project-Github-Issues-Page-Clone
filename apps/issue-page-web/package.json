@@ -28,6 +28,6 @@
     "next-transpile-modules": "^10.0.0",
     "tsconfig": "*",
     "typescript": "^4.9.3",
-    "unocss": "^0.46.5"
+    "unocss": "^0.47.6"
   }
 }
