@@ -24,7 +24,7 @@
     "@storybook/react-vite": "^7.0.0-beta.13",
     "@storybook/testing-library": "^0.0.14-next.1",
     "storybook": "^7.0.0-beta.12",
-    "vite": "^4.0.2"
+    "vite": "^4.0.3"
   },
   "overrides": {
     "@mdx-js/react": {
