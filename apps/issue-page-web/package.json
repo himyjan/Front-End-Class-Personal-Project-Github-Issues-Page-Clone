@@ -20,7 +20,7 @@
     "@types/node": "^18.11.18",
     "@types/react": "^18.0.26",
     "@types/react-dom": "^18.0.10",
-    "@unocss/preset-attributify": "^0.48.0",
+    "@unocss/preset-attributify": "^0.48.2",
     "@unocss/reset": "^0.48.2",
     "@unocss/webpack": "^0.48.0",
     "eslint": "^8.31.0",
