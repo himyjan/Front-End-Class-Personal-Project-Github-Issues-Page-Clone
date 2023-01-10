@@ -16,7 +16,7 @@
   "devDependencies": {
     "@mdx-js/react": "^2.2.1",
     "@storybook/addon-essentials": "^7.0.0-beta.21",
-    "@storybook/addon-interactions": "^7.0.0-beta.20",
+    "@storybook/addon-interactions": "^7.0.0-beta.21",
     "@storybook/addon-links": "^7.0.0-beta.21",
     "@storybook/builder-vite": "^7.0.0-beta.21",
     "@storybook/mdx2-csf": "^1.0.0-next.4",
